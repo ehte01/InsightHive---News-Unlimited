@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    background-color: #f3f3f3;
+}
+
+img{
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.heading{
+    background-color: #cb202d;
+    color: #ffffff;
+    font-size: 2.5em;
+    padding: 0.3em 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 50px 0 rgba(2,0,31, 0.3);
+    z-index: 2;
+}
+
+.heading h4{
+    padding: 2rem 0 0 0;
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+
+.head-top{
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    padding: 0 3.8rem;
+}
+.but{
+    display: flex;
+}
+.but button{
+    padding: 0.3rem 0.6rem;
+    margin-right: 0.8rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.heading .date{
+    font-size: 13px;
+}
+
+.option-container{
+    margin: 1em 0 2em 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    text-align: center;
+}
+
+.goog-te-gadget img{
+    width: 40px;
+    height: auto;
+}
+
+#google_translate_element{
+    padding-left: 9.5rem;   
+}
+
+.option-container .option{
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #d5d5d5;
+    border: none;
+}
+
+.main{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1em;
+}
+
+.news-card{
+   display: grid;
+   position: relative;
+   grid-template-rows: auto 1fr;
+   box-shadow: 0 0 15px rgba(85,85,85, 0.3);
+   margin: 1em 0;
+   border-radius: 15px;
+}
+
+.news-card img{
+    border-radius: 15px 15px 0 0;
+}
+
+.news-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em 2.5em;
+    font-size: 15px;
+}
+
+.news-title{
+    font-weight: 600;
+    color: #0b0028;
+    padding: 0.5em 0;
+}
+
+.news-description{
+    color: #6f6f6f;
+    text-align: justify;
+    margin: 0.8em 0 1em 0;
+}
+
+.view-button{
+    position: relative;
+    text-decoration: none;
+    background-color: #cb202d;
+    color: #ffffff;
+    width: 7em;
+    text-align: center;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+}
+
+.active{
+    background-color: #cb202d !important;
+    color: #ffffff;
+}
+.ham{
+    position: relative;
+    display: none;
+}
+.fa-bars{
+    position: absolute;
+    font-size: 20px;
+    top: 4px;
+    right: 2px;
+    cursor: pointer;
+}
+.side-bar{
+    background-color: #f3f3f3;
+    border-radius: 6px;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 5;
+    height: 150px;
+    display: none;
+    transition: all 1s ease-in;
+}
+.side-bar button{
+    padding: 0.3rem 0.5rem;
+    margin-top: 4px;
+    background-color: #cb202d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(2,0,31, 0.3);
+}
+.fa-circle-xmark{
+    position: absolute;
+    top: 6px;
+    right: 8px;
+}
+
+footer{
+    background-color: #cb202d;
+    color: #f3f3f3;
+    padding: 3rem 3rem 1.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+}
+.sub-title{
+    font-size: 12px;
+}
+.icon{
+    align-self: center;
+    padding-top: 2rem;
+}
+.icon i{
+    font-size: 20px;
+    margin: 10px 5px;
+    cursor: pointer;
+}
+.icon i:hover{
+    color: lightgrey;
+}
+
+.copyright{
+    padding: 2rem 0 0 0;
+    align-self: center;
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 768px){
+    .main{
+        grid-template-columns: repeat(1,1fr);
+    }
+    #google_translate_element {
+        padding-left: 0;
+    }
+    .head-top {
+        justify-content: space-between;
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 499px){
+    .head-top {
+        padding: 0 0.8rem;
+        flex-wrap: wrap;
+    }
+    #google_translate_element {
+        padding-left: 0rem;
+    }
+    .but{
+        display: none;
+    }
+    .heading h4 {
+        margin-top: 10px;
+    }
+    .ham{
+        transition: all 2s;
+        display: block;
+    }
+    .side-bar{
+        flex-direction: column;
+    }
+    .side-bar button{
+        width: 100%;
+        display: block;
+        margin-top: 15px;
+    }
+
+    footer{
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    }
+
+}
