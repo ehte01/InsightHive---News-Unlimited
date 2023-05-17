@@ -190,18 +190,21 @@ footer{
     flex-direction: column;
 }
 .sub-title{
-    font-size: 12px;
+    font-size: 10px;
 }
 .icon{
     align-self: center;
     padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
 }
-.icon i{
+.icon .ico i{
     font-size: 20px;
     margin: 10px 5px;
     cursor: pointer;
 }
-.icon i:hover{
+.icon .ico i:hover{
     color: lightgrey;
 }
 
